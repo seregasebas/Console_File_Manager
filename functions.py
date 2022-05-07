@@ -10,7 +10,7 @@ def create_directory(name):
         print(f'Папка {name} создана')
     else:
         print(f'Папка {name} уже существует')
-
+    
 #удаление папки(директории)/файла
 def del_directory(text, name):
     if text == 'ф':
@@ -47,21 +47,23 @@ def only_files():
 
 #- просмотр информации об операционной системе;
 def os_info():
-    os.name()
+    print(os.name)
 
 #- создатель программы;
 def creator():
-    os.getlogin()
+    print(os.getlogin())
 
 #- играть в викторину;
-viktorina.viktorina()
+def viktorina_quiz():
+    viktorina.quiz()
 
 #- мой банковский счет;
 # bank_account()
 
 #- смена рабочей директории (*необязательный пункт);
-def smena_papki(name = input('Введите путь директории: ')):
+def smena_papki(name):
     os.chdir(name)
+    print(f'вы в директории: {os.getcwd()}')
 
 # Перейти на 1 директорию вверх
 def papka_up():
