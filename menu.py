@@ -32,7 +32,7 @@ while True:
     elif choice == '8':
         functions.creator()
     elif choice == '9':
-        pass
+        function.viktorina()
     elif choice == '10':
         pass
     elif choice == '11':
