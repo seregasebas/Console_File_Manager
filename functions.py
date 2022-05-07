@@ -1,6 +1,7 @@
 import os
 import sys
 import shutil
+import viktorina
 
 #Создание папки(директории)
 def create_directory(name):
@@ -53,7 +54,7 @@ def creator():
     os.getlogin()
 
 #- играть в викторину;
-viktorina()
+viktorina.viktorina()
 
 #- мой банковский счет;
 # bank_account()
