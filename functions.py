@@ -2,6 +2,7 @@ import os
 import sys
 import shutil
 import viktorina
+import bank_account
 
 #Создание папки(директории)
 def create_directory(name):
@@ -10,6 +11,12 @@ def create_directory(name):
         print(f'Папка {name} создана')
     else:
         print(f'Папка {name} уже существует')
+
+#Создание файла
+def create_file(name, expansion):
+    text_f = open(f'{name}.{expansion}', 'w')
+    text_f.close()
+    print(f'файл {text_f} создан')
     
 #удаление папки(директории)/файла
 def del_directory(text, name):
@@ -58,7 +65,8 @@ def viktorina_quiz():
     viktorina.quiz()
 
 #- мой банковский счет;
-# bank_account()
+def account_bank():
+    bank_account.bank_acc()
 
 #- смена рабочей директории (*необязательный пункт);
 def smena_papki(name):
