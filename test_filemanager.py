@@ -1,4 +1,4 @@
-'''Тесты для функций Console_file_manager'''
+'''Тесты для функций Console_file_manager.'''
 import os
 from viktorina import num_to_str
 from functions import os_info, smena_papki, dir_cont, create_file, create_directory, creator
