@@ -8,15 +8,15 @@ import bank_account
 def create_directory(name):
     if not os.path.exists(name):
         os.mkdir(name)
-        print(f'Папка {name} создана')
+        return f'Папка {name} создана'
     else:
-        print(f'Папка {name} уже существует')
+        return f'Папка {name} уже существует'
 
 #Создание файла
 def create_file(name, expansion):
     text_f = open(f'{name}.{expansion}', 'w')
     text_f.close()
-    print(f'файл {name}.{expansion} создан')
+    return f'файл {name}.{expansion} создан'
     
 #удаление папки(директории)/файла
 def del_directory(text, name):
@@ -38,7 +38,7 @@ def copy_dir_file(text, name, new_name):
 
 # просмотр содержимого рабочей директории
 def dir_cont():
-    print(os.listdir())
+    return os.listdir()
 
 #- посмотреть только папки;
 def only_papka():
@@ -56,11 +56,11 @@ def only_files():
 
 #- просмотр информации об операционной системе;
 def os_info():
-    print(os.name)
+    return os.name
 
 #- создатель программы;
 def creator():
-    print(os.getlogin())
+    return os.getlogin()
 
 #- играть в викторину;
 def viktorina_quiz():
@@ -73,7 +73,7 @@ def account_bank():
 #- смена рабочей директории (*необязательный пункт);
 def smena_papki(name):
     os.chdir(name)
-    print(f'вы в директории: {os.getcwd()}')
+    return f'вы в директории: {os.getcwd()}'
 
 # Перейти на 1 директорию вверх
 def papka_up():
