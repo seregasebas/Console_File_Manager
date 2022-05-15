@@ -5,10 +5,11 @@ def menu():
     while True:
         ml = ['1.создать папку','2.создать файл','3.удалить (файл/папку)','4.копировать (файл/папку)','5.просмотр содержимого рабочей директории',
         '6.посмотреть только папки','7.посмотреть только файлы','8.просмотр информации об операционной системе','9.создатель программы',
-        '10.играть в викторину','11.мой банковский счет','12.смена рабочей директории','13.перейти в директорию выше','14.выход']
+        '10.играть в викторину','11.мой банковский счет','12.смена рабочей директории','13.перейти в директорию выше',
+        '14.сохранить содержимое рабочей директории в файл', '15.выход']
         print('-'*15)
         print(f'{ml[0]}\n{ml[1]}\n{ml[2]}\n{ml[3]}\n{ml[4]}\n{ml[5]}\n{ml[6]}\n'
-              f'{ml[7]}\n{ml[8]}\n{ml[9]}\n{ml[10]}\n{ml[11]}\n{ml[12]}\n{ml[13]}')
+              f'{ml[7]}\n{ml[8]}\n{ml[9]}\n{ml[10]}\n{ml[11]}\n{ml[12]}\n{ml[13]}\n{ml[14]}')
         print('-'*15)
 
         choice = input('Выберите пункт меню: ')
@@ -28,15 +29,15 @@ def menu():
             new_name = input('Введите новое название: ')
             functions.copy_dir_file(text, name, new_name)
         elif choice == '5':
-            functions.dir_cont()
+            print(functions.dir_cont())
         elif choice == '6':
-            functions.only_papka()
+            print(functions.only_papka())
         elif choice == '7':
-            functions.only_files()
+            print(functions.only_files())
         elif choice == '8':
-            functions.os_info()
+            print(functions.os_info())
         elif choice == '9':
-            functions.creator()
+            print(functions.creator())
         elif choice == '10':
             functions.viktorina_quiz()
         elif choice == '11':
@@ -46,4 +47,6 @@ def menu():
         elif choice == '13':
             functions.papka_up()
         elif choice == '14':
+            functions.save_dir()
+        elif choice == '15':
             break
