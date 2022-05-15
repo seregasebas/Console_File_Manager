@@ -50,6 +50,7 @@ def test_create_directory():
 
 
 # тест функции сохранения данных в json
+# из модуля bankaccount.py
 def test_save_json():
     cash = 100
     name = 'cash_test.json'
