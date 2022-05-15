@@ -71,5 +71,3 @@ def bank_acc():
             save_json(cash, 'cash.json')
             save_json(purchase, 'purchase.json')
             break
-
-bank_acc()
