@@ -2,7 +2,7 @@
 import os
 import json
 from viktorina import num_to_str
-from functions import os_info, smena_papki, dir_cont, create_file, create_directory, creator
+from functions import os_info, smena_papki, dir_cont, create_file, create_directory, creator, save_dir
 from bank_account import save_json
 
 # тест функции преобразования даты в прописное название
@@ -58,3 +58,9 @@ def test_save_json():
     assert os.path.exists(name)
     with open(name, 'r') as f:
         assert json.load(f) == cash
+
+# тест функции "сохранить содержимое рабочей директории в файл"
+def test_save_dir():
+    save_dir()
+    assert os.path.exists('listdir.txt')
+
