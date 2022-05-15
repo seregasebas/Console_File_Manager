@@ -1,5 +1,6 @@
 '''Тесты для функций Console_file_manager.'''
 import os
+import json
 from viktorina import num_to_str
 from functions import os_info, smena_papki, dir_cont, create_file, create_directory, creator
 from bank_account import save_json
@@ -55,4 +56,4 @@ def test_save_json():
     save_json(cash, name)
     assert os.path.exists(name)
     with open(name, 'r') as f:
-        assert f.load(name) == cash
+        assert json.load(f) == cash
