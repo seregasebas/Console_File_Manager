@@ -45,14 +45,14 @@ def only_papka():
     papka = []
     for papki in os.walk("."):
         papka.append(papki)
-    print(papka[0][1])
+    return papka[0][1]
 
 #- посмотреть только файлы;
 def only_files():
     file = []
     for filenames in os.walk("."):
         file.append(filenames)
-    print(file[0][2])
+    return file[0][2]
 
 #- просмотр информации об операционной системе;
 def os_info():
@@ -79,6 +79,16 @@ def smena_papki(name):
 def papka_up():
     os.chdir(os.pardir)
     print(f'вы в директории: {os.getcwd()}')
+
+# сохранить содержимое рабочей директории в файл
+def save_dir():
+    with open('listdir.txt', 'w') as f:
+        files = only_files()
+        papki = only_papka()
+        f.write('files: ' + ', '.join(files) + '\n') 
+        f.write('dict: ' + ', '.join(papki))
+        print(f'файл listdir.txt создан')
+
 #- выход.
 
 #Так же можно добавить любой дополнительный функционал по желанию.

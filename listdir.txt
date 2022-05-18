@@ -1,0 +1,2 @@
+files: functions.py, LICENSE, requirements.txt, test_python.py, viktorina.py, bank_account.py, README.md, menu.py, test_filemanager.py, console_file_manager.py, purchase.json, cash.json, listdir.txt
+dict: .pytest_cache, __pycache__, .ipynb_checkpoints, .git, .vscode

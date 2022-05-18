@@ -1,7 +1,9 @@
 '''Тесты для функций Console_file_manager.'''
 import os
+import json
 from viktorina import num_to_str
-from functions import os_info, smena_papki, dir_cont, create_file, create_directory, creator
+from functions import os_info, smena_papki, dir_cont, create_file, create_directory, creator, save_dir
+from bank_account import save_json
 
 # тест функции преобразования даты в прописное название
 # из модуля viktorina.py
@@ -45,3 +47,20 @@ def test_create_directory():
         os.rmdir('new_papka')
         assert create_directory('new_papka') == 'Папка new_papka создана'
         assert create_directory('new_papka') == 'Папка new_papka уже существует'
+
+
+# тест функции сохранения данных в json
+# из модуля bankaccount.py
+def test_save_json():
+    cash = 100
+    name = 'cash_test.json'
+    save_json(cash, name)
+    assert os.path.exists(name)
+    with open(name, 'r') as f:
+        assert json.load(f) == cash
+
+# тест функции "сохранить содержимое рабочей директории в файл"
+def test_save_dir():
+    save_dir()
+    assert os.path.exists('listdir.txt')
+
