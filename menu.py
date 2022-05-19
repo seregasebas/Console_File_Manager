@@ -1,6 +1,6 @@
 # Основное меню программы
 import functions
-import calculator
+import calculator_generator
 
 def menu():
     while True:
