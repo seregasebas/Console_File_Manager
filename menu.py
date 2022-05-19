@@ -50,8 +50,8 @@ def menu():
         elif choice == '14':
             functions.save_dir()
         elif choice == '15':
-            calculator.calculator()
+            calculator_generator.calculator()
         elif choice == '16':
-            calculator.random_number_generator()
+            calculator_generator.random_number_generator()
         elif choice == '17':
             break
