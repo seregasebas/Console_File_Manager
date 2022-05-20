@@ -4,6 +4,7 @@ import json
 from viktorina import num_to_str
 from functions import os_info, smena_papki, dir_cont, create_file, create_directory, creator, save_dir
 from bank_account import save_json
+from calculator_generator import znaki
 
 # тест функции преобразования даты в прописное название
 # из модуля viktorina.py
@@ -63,4 +64,9 @@ def test_save_json():
 def test_save_dir():
     save_dir()
     assert os.path.exists('listdir.txt')
+
+# тест функции znaki из модуля calculator_generator.py
+def test_znaki():
+    assert znaki('+', 2, 3) == print('Результат:\n5\n---------------')
+
 
